@@ -21,10 +21,10 @@
 
 
     <script>
-//         const hole= document.getElementById("hole");
-//  var result = document.getElementById("result");
-//  var text = document.getElementById("text");
-//  var game  = document.getElementById("game");
+        const hole= document.getElementById("hole");
+ var result = document.getElementById("result");
+ var text = document.getElementById("text");
+ var game  = document.getElementById("game");
  var jumping = 0;
  var score = 0;
 
@@ -60,8 +60,8 @@ hole.addEventListener("animationiteration", hol)
  function jump(){
     jumping = 1;
 
-    var birdTop = parseInt(window.getComputedStyle(plane).getPropertyValue("top"));
-    if(birdTop > 6){plane.style.top = (birdTop - 60 ) + "px"}
+    var planeTop = parseInt(window.getComputedStyle(plane).getPropertyValue("top"));
+    if(planeTop > 6){plane.style.top = (planeTop - 60 ) + "px"}
 
     setTimeout(function(){
         jumping = 0
