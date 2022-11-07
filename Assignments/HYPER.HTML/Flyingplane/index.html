@@ -20,16 +20,14 @@
      </div>
 
 
-
     <script>
-        const hole= document.getElementById("hole");
- var result = document.getElementById("result");
- var text = document.getElementById("text");
- var game  = document.getElementById("game");
+//         const hole= document.getElementById("hole");
+//  var result = document.getElementById("result");
+//  var text = document.getElementById("text");
+//  var game  = document.getElementById("game");
  var jumping = 0;
  var score = 0;
 
- //animation 
 
 hole.addEventListener("animationiteration", hol)
 
@@ -40,7 +38,6 @@ hole.addEventListener("animationiteration", hol)
  }
 
 
-//fall and game over
   var fall = setInterval(function(){
       var planeTop = parseInt(window.getComputedStyle(plane).getPropertyValue("top"));
        if(jumping == 0){plane.style.top = (planeTop + 2) + "px";}
@@ -53,17 +50,13 @@ hole.addEventListener("animationiteration", hol)
            text.innerText = `Score : ${score}`;
            game.style.display = "none";
            score = 0;
-
-           
        }
-
-      
 
 
   },10)
 
 
-  //jump
+ 
  function jump(){
     jumping = 1;
 
