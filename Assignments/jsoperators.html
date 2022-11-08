@@ -7,116 +7,211 @@
     <title>JAVA SCRIPT</title>
   </head>
   <body>
+    <button onclick="location.reload()">Restart</button>
     <script>
-//       arthematic operators
-//           var a=100;
-//           var b=10;
-//           console.log("the value of a + b is", a+b);
-//           console.log("the value of a - b is", a-b);
-//           console.log("the value of a * b is", a*b);
-//           console.log("the value of a / b is", a/b);
+      //       arthematic operators
+      //           var a=100;
+      //           var b=10;
+      //           console.log("the value of a + b is", a+b);
+      //           console.log("the value of a - b is", a-b);
+      //           console.log("the value of a * b is", a*b);
+      //           console.log("the value of a / b is", a/b);
 
-//           var arr=[1,2,3,4,5,6,7,8,9]
-//                 console.log(arr[8])
+      //           var arr=[1,2,3,4,5,6,7,8,9]
+      //                 console.log(arr[8])
 
-//          var arr ={
-//           ravi : 88,
-//           shubham: 90,
-//           jvcuksa: 89,
-//          }
-//          console.log(arr)
+      //          var arr ={
+      //           ravi : 88,
+      //           shubham: 90,
+      //           jvcuksa: 89,
+      //          }
+      //          console.log(arr)
 
-//       function mul(x){
-//       return x*5;
-//       }
+      //       function mul(x){
+      //       return x*5;
+      //       }
 
-//       const arrr=[];
-//       const arr1=[1,2,3,4,50,6,7,8,9,10];
+      //       const arrr=[];
+      //       const arr1=[1,2,3,4,50,6,7,8,9,10];
 
-//       for(let i=0;i<arr1.length;i++){
+      //       for(let i=0;i<arr1.length;i++){
 
-//           arrr.push(mul(i));
-//           console.log(arrr);
-//       }
-//       console.log(arrr);
+      //           arrr.push(mul(i));
+      //           console.log(arrr);
+      //       }
+      //       console.log(arrr);
 
-//       function ad(a,b){
-//           c=a+b;
-//           return c;
-//       }
-//       c1=ad(10,89)
-//       c2=ad(10,99)
-//       console.log(c1,c2)
+      //       function ad(a,b){
+      //           c=a+b;
+      //           return c;
+      //       }
+      //       c1=ad(10,89)
+      //       c2=ad(10,99)
+      //       console.log(c1,c2)
 
-//       var obtainedmarks=25;
-//       if (obtainedmarks>35) {
-//           console.log('you have failed the exam')
-//       }
-//       else if (obtainedmarks>21){
-//           console.log('you have passed the exam')
-//       }
-//       var age=8;
-//       if (age>18){
-//         console.log('u r not a kid')
-//       }
-//       else if (age>16){
-//           console.log('u r 16')
-//       }
-//       else {
-//           console.log('u r a kid')
-//       }
-//       let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-//        console.log(arr);
-//          for (var i=0;i<arr.length;i++){
-//             if(i==2){
-//                 break
-//                 continue
-//             }
-//           console.log(arr[i])}
-//  var arr1=['a','b','c','d','e','f'];
-//       console.log(arr1);
-//       for (var i=0;i<arr1.length;i++){
-//           console.log(arr1[i])
-//       }
-//       arr.forEach(function (element) {
-//         console.log(element);
-//       });
-//    let j=0;
-//    while (j<arr.length){
-//     console.log(arr[j])
-//     j++;
-//    }
-     
-// let myArr=['arbaz','fan',3,5,null,true];
-// console.log(myArr.length);
-// myArr.pop()
-// console.log(myArr);
-// myArr.push('newItem');
-// myArr.shift();
-// myArr.unshift('First');
-// myArr.sort(); 
-// console.log(myArr);
-      
-//       let myDate=new Date();
-//       console.log(myDate.getTime());
-//       console.log(myDate.getDate());
-//       console.log(myDate.getDay());
-//       console.log(myDate.getFullYear());
-//       console.log(myDate.getMinutes());
-//       console.log(myDate.getHours());
-//       addEventListener
+      //       var obtainedmarks=25;
+      //       if (obtainedmarks>35) {
+      //           console.log('you have failed the exam')
+      //       }
+      //       else if (obtainedmarks>21){
+      //           console.log('you have passed the exam')
+      //       }
+      //       var age=8;
+      //       if (age>18){
+      //         console.log('u r not a kid')
+      //       }
+      //       else if (age>16){
+      //           console.log('u r 16')
+      //       }
+      //       else {
+      //           console.log('u r a kid')
+      //       }
+      //       let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      //        console.log(arr);
+      //          for (var i=0;i<arr.length;i++){
+      //             if(i==2){
+      //                 break
+      //                 continue
+      //             }
+      //           console.log(arr[i])}
+      //  var arr1=['a','b','c','d','e','f'];
+      //       console.log(arr1);
+      //       for (var i=0;i<arr1.length;i++){
+      //           console.log(arr1[i])
+      //       }
+      //       arr.forEach(function (element) {
+      //         console.log(element);
+      //       });
+      //    let j=0;
+      //    while (j<arr.length){
+      //     console.log(arr[j])
+      //     j++;
+      //    }
 
-// closure
-function init() {
-  var name = 'Mozilla'; // name is a local variable created by init
-  function displayName() {
-    // displayName() is the inner function, a closure
-    console.log(name); // use variable declared in the parent function
-  }
-  displayName();
+      // let myArr=['arbaz','fan',3,5,null,true];
+      // console.log(myArr.length);
+      // myArr.pop()
+      // console.log(myArr);
+      // myArr.push('newItem');
+      // myArr.shift();
+      // myArr.unshift('First');
+      // myArr.sort();
+      // console.log(myArr);
+
+      //       let myDate=new Date();
+      //       console.log(myDate.getTime());
+      //       console.log(myDate.getDate());
+      //       console.log(myDate.getDay());
+      //       console.log(myDate.getFullYear());
+      //       console.log(myDate.getMinutes());
+      //       console.log(myDate.getHours());
+      //       addEventListener
+
+      // function add(a,b){
+      //   return c=a+b
+      // }
+      // console.log(add(3,5));
+
+      // function write(){
+      //   document.write('Hello World')
+      // }
+      // write();
+
+      // (function (){
+      //   document.write('HI there')
+      // })();
+      // let z='i know';
+
+      // (function (){
+      //   let z='you know'
+      //   // let y='ooops'
+      //   console.log(z)
+      //   // alert(y)
+      // })();
+
+      // closure
+      // function init() {
+      //   var name = 'Arbaz';
+      //   function displayName() {
+
+      //     console.log(name);
+      //   }
+      //   displayName();
+      // }
+      // init();
+
+      // const x = () => {
+      //   let a = 1;
+      //   console.log(a);
+      //   const y = () => {
+      //     let a = 2;
+      //     console.log(a);
+      //     const z = () => {
+      //       let a = 3;
+      //       console.log(a);
+      //     };
+      //     z();
+      //   };
+      //   y();
+      // };
+      // x();
+
+      // function add(a, b) {
+      //   return a + b;
+      // }
+
+      // function hofn(a, b, c) {
+      //   let result=c(a,b);
+      //   console.log(result)
+      // }
+      // hofn(2, 3, add);
+
+
+
+
+
+//  const div = (a,b) =>{
+//   var total=a/b
+// console.log(total) 
+ 
+// }
+//  div(4,2);
+//  div(6,2);
+
+// (function (){
+// document.write("Hello world")
+// })();
+
+//  myfn = (a,b,c)=>{
+//   var c=a/b;
+//  console.log(c)
+// }
+// myfn(8,2);
+
+
+// const a=(x)=>(y)=>x/y;
+// console.log(a(8)(2));
+
+
+function count(a) {
+console.log(a);
+const b = a - 1;
+if (b > 0) {
+    count(b);
 }
-init();
+}
+count(10);
+
+
+
+
+
+
+
+
+
+
+
     </script>
   </body>
 </html>
-
