@@ -92,26 +92,26 @@
 
 // console.log(a)
 
-let count=1;
+// let count=1;
 
-function Increment(x){
- count++;
- return count;
-}
+// function Increment(x){
+//  count++;
+//  return count;
+// }
 
-function Decrement(x){
-count--;
-if(count<0){
-   return
-}
-return count;
-}
+// function Decrement(x){
+// count--;
+// if(count<0){
+//    return
+// }
+// return count;
+// }
 
 
 
-// console.log(Increment())
-console.log(Decrement())
-console.log(Decrement())
+// // console.log(Increment())
+// console.log(Decrement())
+// console.log(Decrement())
 
 
 
@@ -120,12 +120,21 @@ console.log(Decrement())
 //     if(count<0)return
 // }
 
+// let num1=4;
+// let num2=8;
+// let ans = num1+num2;
+// console.log(`the addition of ${num1} and ${num2} is ${ans}`)
 
-
-
-
-
-
+let username="Arbaz"
+function makefunc(){
+    let name ="ABC";
+    function displayName(num){
+        console.log(name,num,username);
+    }
+    return displayName;
+}
+makefunc();
+console.log(makefunc().name)
 
 
 
