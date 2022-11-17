@@ -1,265 +1,300 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1 id="h1">HELLO WORLD</h1>
     <script>
-    // (function (){
-    //     document.getElementById("h1").innerHTML="Hi There"
-    // })();
-    // let studentsData = [[["Jack"], [24]],[["Sara"], [23]]];
-        
-    //     // iterating over the studentsData
-    //     studentsData.forEach((student) => {
-    //       student.forEach((data) => {
-    //         data.forEach((abc)=>{
-             
-               
-    //         });
-    //       });
-    //     });
-    //     studentsData[0][0].push("Hi");
-    //     console.count(studentsData)
-
-
-
-//     let num = [5,1 ,2,4,2,2,5,55,6,2,3,6,15,0,6,9,10];
-// let newArray=num.filter((x,y)=> y%5!=0).filter(x=>x%5!=0).map(x=>x+"");
-// console.log(newArray)
-
-//  let a=[1,2,3,4,5]
-//       a.forEach((x,y)=>{
-//         document.write(y+":",x+"<br>")
-
-//       });
-
-    //   function add(a,b) {
-    //     return a + b;
-    //   }
-
-    //   function hofn(a,b,c) {
-    //     let result=c(a,b);
-    //     console.log(result);
-    //   }
-    //   hofn(2,5,add);
-
-//   const x = () => {
-//         let
-//  a = 1;
-//         console.log(a);
-//         const y = () => {
-//           let a = 2;
-//           console.log(a);
-//           const z = () => {
-//             let a = 3;
-//             console.log(a);
-//           };
-//           z();
-//         };
-//         y();
-//       };
-//       x();
-
-
-// function temp(a){
-//    console.log(a)
-//     let b = a - 1;
-//     if (b>0) {temp(b) };
-//  }
-// temp(10);
-
-// let arrw = ( (x) => { 
-
-// // console.log(x+"self invovking");
-// let s1 = 10;
-// let s2 = 20;
-// let s3 = s1+s2;
-// console.log(s3)
-// });
-
-// console.log(arrw)
-
-//  let a = 1;
-// a++;
-
-//  a = 1;
-// a++;
-
-// console.log(a)
-
-// let count=1;
-
-// function Increment(x){
-//  count++;
-//  return count;
-// }
-
-// function Decrement(x){
-// count--;
-// if(count<0){
-//    return
-// }
-// return count;
-// }
-
-
-
-// // console.log(Increment())
-// console.log(Decrement())
-// console.log(Decrement())
-
-// let [a,b,c,...d]=[1,2,3,4,5,6,7,8,9,0,1,2,3,4,4]
-
-// console.log(a,b,c,d);
-// console.log(b);
-// console.log(c);
-// console.log(d);
-
-const laptop={
-    Name: "Lenovo",
-    Age:"45days",
-    color:"black",
-    type: "gaming",
-    net : 2000,
-    hii: function (){ console.log('DONE'); }  
-}
-const {Name,Age,color,type,net, hii} = laptop;
-console.log(Name,Age,color,type,net, hii);
-hii()
-
-
-
-
-
-
-
-// function abc(){
-//     if(count<0)return
-// }
-
-// let num1=4;
-// let num2=8;
-// let ans = num1+num2;
-// console.log(`the addition of ${num1} and ${num2} is ${ans}`)
-
-// let username="Arbaz"
-// function makefunc(){
-//     let name ="ABC";
-//     function displayName(num){
-//         console.log(name,num,username);
-//     }
-//     return displayName;
-// }
-// makefunc();
-// console.log(makefunc().name)
-
-// let text="arbaz";
-// let text2=`hi there ${text}` 
-// console.log(text2)
-
-// var a="arbaz"
-// function abc(){
-//     console.log(a);
-// }
-// abc();
-// console.log(abc()) 
-
-// let [Increment,Decrement]=( ()=>{
-//     let counter=0;
-
-//     function a(){
-//         counter++;
-//         return counter;
-//     }
-//     function b(){
-//         counter--;
-//         return counter;
-//     }
-//     return [a,b];
-   
-// })();
-// // Math();
-// console.log(Increment(),Decrement(),Increment(),Decrement(),Increment(),Decrement(),)
-
-// var [a,b,c,d]=[1,2,3,4];
-// console.log(a,b,c)
-
-
-// Recursive
-// function factorial(x) {
-
-
-// if (x == 0) {
-//     return 1;
-// }
-
-
-// else {
-//     return x * factorial(x - 1);
-// }
-// }
-
-
-// const num = prompt('Enter a positive number: ');
-
-
-// if (num >= 0) {
-// const result = factorial(num);
-// console.log(`The factorial of ${num} is ${result}`);
-// }
-// else {
-// console.log('Enter a positive number.');
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let arr="hi there";
-// arr1=arr.replace("hi","Hello")
-// console.log(arr1)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      // (function (){
+      //     document.getElementById("h1").innerHTML="Hi There"
+      // })();
+      // let studentsData = [[["Jack"], [24]],[["Sara"], [23]]];
+
+      //     // iterating over the studentsData
+      //     studentsData.forEach((student) => {
+      //       student.forEach((data) => {
+      //         data.forEach((abc)=>{
+
+      //         });
+      //       });
+      //     });
+      //     studentsData[0][0].push("Hi");
+      //     console.count(studentsData)
+
+      //     let num = [5,1 ,2,4,2,2,5,55,6,2,3,6,15,0,6,9,10];
+      // let newArray=num.filter((x,y)=> y%5!=0).filter(x=>x%5!=0).map(x=>x+"");
+      // console.log(newArray)
+
+      //  let a=[1,2,3,4,5]
+      //       a.forEach((x,y)=>{
+      //         document.write(y+":",x+"<br>")
+
+      //       });
+
+      //   function add(a,b) {
+      //     return a + b;
+      //   }
+
+      //   function hofn(a,b,c) {
+      //     let result=c(a,b);
+      //     console.log(result);
+      //   }
+      //   hofn(2,5,add);
+
+      //   const x = () => {
+      //         let
+      //  a = 1;
+      //         console.log(a);
+      //         const y = () => {
+      //           let a = 2;
+      //           console.log(a);
+      //           const z = () => {
+      //             let a = 3;
+      //             console.log(a);
+      //           };
+      //           z();
+      //         };
+      //         y();
+      //       };
+      //       x();
+
+      // function temp(a){
+      //    console.log(a)
+      //     let b = a - 1;
+      //     if (b>0) {temp(b) };
+      //  }
+      // temp(10);
+
+      // let arrw = ( (x) => {
+
+      // // console.log(x+"self invovking");
+      // let s1 = 10;
+      // let s2 = 20;
+      // let s3 = s1+s2;
+      // console.log(s3)
+      // });
+
+      // console.log(arrw)
+
+      //  let a = 1;
+      // a++;
+
+      //  a = 1;
+      // a++;
+
+      // console.log(a)
+
+      // let count=1;
+
+      // function Increment(x){
+      //  count++;
+      //  return count;
+      // }
+
+      // function Decrement(x){
+      // count--;
+      // if(count<0){
+      //    return
+      // }
+      // return count;
+      // }
+
+      // // console.log(Increment())
+      // console.log(Decrement())
+      // console.log(Decrement())
+
+      // let [a,b,c,...d]=[1,2,3,4,5,6,7,8,9,0,1,2,3,4,4]
+
+      // console.log(a,b,c,d);
+      // console.log(b);
+      // console.log(c);
+      // console.log(d);
+
+      // const laptop={
+      //     Name: "Lenovo",
+      //     Age:"45days",
+      //     color:"black",
+      //     type: "gaming",
+      //     net : 2000,
+      //     hii: function (){ console.log('DONE'); }
+      // }
+      // const {Name,Age,color,type,net, hii} = laptop;
+      // console.log(Name,Age,color,type,net, hii);
+      // hii()
+
+      // function abc(){
+      //     if(count<0)return
+      // }
+
+      // let num1=4;
+      // let num2=8;
+      // let ans = num1+num2;
+      // console.log(`the addition of ${num1} and ${num2} is ${ans}`)
+
+      // let username="Arbaz"
+      // function makefunc(){
+      //     let name ="ABC";
+      //     function displayName(num){
+      //         console.log(name,num,username);
+      //     }
+      //     return displayName;
+      // }
+      // makefunc();
+      // console.log(makefunc().name)
+
+      // let text="arbaz";
+      // let text2=`hi there ${text}`
+      // console.log(text2)
+
+      // var a="arbaz"
+      // function abc(){
+      //     console.log(a);
+      // }
+      // abc();
+      // console.log(abc())
+
+      // let [Increment,Decrement]=( ()=>{
+      //     let counter=0;
+
+      //     function a(){
+      //         counter++;
+      //         return counter;
+      //     }
+      //     function b(){
+      //         counter--;
+      //         return counter;
+      //     }
+      //     return [a,b];
+
+      // })();
+      // // Math();
+      // console.log(Increment(),Decrement(),Increment(),Decrement(),Increment(),Decrement(),)
+
+      // var [a,b,c,d]=[1,2,3,4];
+      // console.log(a,b,c)
+
+      // Recursive
+      // function factorial(x) {
+
+      // if (x == 0) {
+      //     return 1;
+      // }
+
+      // else {
+      //     return x * factorial(x - 1);
+      // }
+      // }
+
+      // const num = prompt('Enter a positive number: ');
+
+      // if (num >= 0) {
+      // const result = factorial(num);
+      // console.log(`The factorial of ${num} is ${result}`);
+      // }
+      // else {
+      // console.log('Enter a positive number.');
+      // }
+
+      // let aro=(name, greetings)=>console.log(greetings+ " " + name)
+      // aro("Arbaz", "Hi there");
+
+      // ???????????????????????????????????
+      // const x={
+      //     name: "Arbaz",
+      //     city: "Athani",
+      //     country:"India",
+      //     exp:2,
+      //     abc:function() {
+      //         console.log(`My name is ${this.name} \n ${this.country} `)
+      //     }
+      // }
+      // x.abc();
+
+      // const x={
+      //     name: "Arbaz",
+      //     city: "Athani",
+      //     country:"India",
+      //     exp:2,
+      //     abc:function() {
+      //         let that = this
+      //        setTimeout(function(){
+      //         console.log(`My name is ${that.name} \n i'm from ${that.country} `)
+      //        },1000)
+      //     }
+      // }
+      // x.abc();
+
+      // let add=function(a,b,c){
+      //   return {
+      //     phase1: function(){
+      //         return a+b;
+      //     },
+      //     phase2: function(){
+      //         return b+c;
+      //     },
+      //     phase3: function(){
+      //         return a+b+c;
+      //     },
+      //   }
+      // };
+      //  let store=add(2,4,6);
+      //  console.log(store.phase1(),store.phase2(),store.phase3());
+
+      // (function  show(){
+      //     console.log("Helo World")
+      // })();
+
+      // FACTORIAL
+      // let n=4;
+      // function fac(n){
+      //     if(n==0) return 1;
+      //     else return n * fac(n-1);
+      // }
+      // let hey=fac(n);
+      // console.log(hey)
+
+      // LOOPS
+      // for(let i=0; i<100;i++)
+      // {
+      //     console.log(i);
+      // }
+
+      // let j=0;
+      // while(j<10){
+      //     j++
+      //     console.log(j);
+
+      // }
+
+      // let arr="hi there";
+      // arr1=arr.replace("hi","Hello")
+      // console.log(arr1)
+
+      let abc = (() => {
+        let num = 0;
+        return
+        {
+          a1: () => {
+            num++;
+            return num;
+          };
+          b1: () => {
+            num--;
+            return num;
+          };
+          c1: (x) => {
+            num = x;
+            return num;
+          };
+        }
+        return [a1, b1, c1];
+      })();
+
+      console.log(abc.a1());
     </script>
-</body>
+  </body>
 </html>
