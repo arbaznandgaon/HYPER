@@ -274,27 +274,61 @@
       // arr1=arr.replace("hi","Hello")
       // console.log(arr1)
 
-      let abc = (() => {
-        let num = 0;
-        return
-        {
-          a1: () => {
-            num++;
-            return num;
-          };
-          b1: () => {
-            num--;
-            return num;
-          };
-          c1: (x) => {
-            num = x;
-            return num;
-          };
-        }
-        return [a1, b1, c1];
-      })();
+    //   let abc = (() => {
+    //     let num = 0;
+    //     return
+    //     {
+    //       a1: () => {
+    //         num++;
+    //         return num;
+    //       };
+    //       b1: () => {
+    //         num--;
+    //         return num;
+    //       };
+    //       c1: (x) => {
+    //         num = x;
+    //         return num;
+    //       };
+    //     }
+    //     return [a1, b1, c1];
+    //   })();
 
-      console.log(abc.a1());
+    //   console.log(abc.a1());
+
+  //   let me ={
+  // name: sessionStorage,
+  // id:2
+// }
+
+
+
+let {o,y,z}= (() => {
+  let count=0;
+   return {
+    a1 : () => { count++;
+      return count;
+  },
+
+   b1 : () => {
+      count--;
+      return count;
+  },
+
+    c1 : (x) => {
+      count = x;
+      return count
+  }
+   }
+  return[a1,b1,c1];
+})();
+
+let user={o,y,z};
+
+console.log(user.a1())
+console.log(o.a1(),y.b1(),z.c1("Hey"))
+
+
     </script>
   </body>
 </html>
