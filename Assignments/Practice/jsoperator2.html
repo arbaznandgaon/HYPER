@@ -202,14 +202,13 @@
       // let aro=(name, greetings)=>console.log(greetings+ " " + name)
       // aro("Arbaz", "Hi there");
 
-      // ???????????????????????????????????
       // const x={
       //     name: "Arbaz",
       //     city: "Athani",
       //     country:"India",
       //     exp:2,
-      //     abc:function() {
-      //         console.log(`My name is ${this.name} \n ${this.country} `)
+      //     abc:() =>{
+      //         console.log(`My name is ${x.name} \n ${x.country} `)
       //     }
       // }
       // x.abc();
@@ -274,61 +273,88 @@
       // arr1=arr.replace("hi","Hello")
       // console.log(arr1)
 
-    //   let abc = (() => {
-    //     let num = 0;
-    //     return
-    //     {
-    //       a1: () => {
-    //         num++;
-    //         return num;
-    //       };
-    //       b1: () => {
-    //         num--;
-    //         return num;
-    //       };
-    //       c1: (x) => {
-    //         num = x;
-    //         return num;
-    //       };
-    //     }
-    //     return [a1, b1, c1];
-    //   })();
+      //   let abc = (() => {
+      //     let num = 0;
+      //     return
+      //     {
+      //       a1: () => {
+      //         num++;
+      //         return num;
+      //       };
+      //       b1: () => {
+      //         num--;
+      //         return num;
+      //       };
+      //       c1: (x) => {
+      //         num = x;
+      //         return num;
+      //       };
+      //     }
+      //     return [a1, b1, c1];
+      //   })();
 
-    //   console.log(abc.a1());
+      //   console.log(abc.a1());
 
-  //   let me ={
-  // name: sessionStorage,
-  // id:2
-// }
+      //   let me ={
+      // name: sessionStorage,
+      // id:2
+      // }
 
+      // let [Increment,Decrement,Orbitry]= (() => {
+      //   let count=0;
+      //    const me= {
+      //     a1 : () => { count++;
+      //       return count;
+      //   },
 
+      //    b1 : () => {
+      //       count--;
+      //       return count;
+      //   },
 
-let {o,y,z}= (() => {
-  let count=0;
-   return {
-    a1 : () => { count++;
-      return count;
-  },
+      //     c1 : (x) => {
+      //       count = x;
+      //       return count;
+      //   }
+      //    }
+      //   return[me.a1(),me.b1(),me.c1("Hey")];
+      // })();
 
-   b1 : () => {
-      count--;
-      return count;
-  },
+      // // console.log(user.a1())
+      // console.log(Increment,Decrement,Orbitry)
 
-    c1 : (x) => {
-      count = x;
-      return count
-  }
-   }
-  return[a1,b1,c1];
-})();
+      let BankAccount = {
+        Name: "Arbaz",
+        age: 22,
+        Phonenumber: 9380610250,
+        Email: "arbaznandgaon@gmail.com",
+        pin: 7412,
+        Balance: 5000,
+        Transaction: [],
+        pin0: function (n) {
+          this.pin = n;
+        },
+        credit: function credit(amt) {
+          this.Balance = this.Balance + amt;
+          if (amt < 0) return;
+          return this.Balance;
+        },
+        debit: function debit(amt) {
+          this.Balance = this.Balance - amt;
+          if (amt < 0 || amt > this.Balance) return;
+          return this.Balance;
+        },
+        checkbalance: function checkBalance() {
+          return this.Balance;
+        },
+        Transactionhistory: function Transactionhistory() {},
+      };
 
-let user={o,y,z};
-
-console.log(user.a1())
-console.log(o.a1(),y.b1(),z.c1("Hey"))
-
-
+      BankAccount.pin0((n = 1234));
+      console.log(BankAccount);
+      // console.log(BankAccount.checkbalance())
+      // console.log(BankAccount.credit(1000))
+      // console.log(BankAccount.debit(1000))
     </script>
   </body>
 </html>
