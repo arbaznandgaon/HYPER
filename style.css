@@ -1,0 +1,72 @@
+
+#game{
+    height: 500px;
+    width: 400px;
+    border: 1px solid black;
+    margin: 1rem auto;
+    overflow: hidden;
+}
+#block{
+    width: 50px;
+    height: 500px;
+    background-color: rgb(10, 171, 235);
+    position: relative;
+    left: 400px;
+    animation: block  2s linear  infinite  ;
+}
+@keyframes block {
+    0%{
+        left:400px
+    }
+    100%{
+        left: -50px;
+    }
+    
+}
+#hole{
+    height: 150px;
+    width: 50px;
+    background-color: white;
+    position: relative;
+    left: 400px;
+    top:-500px;
+    animation: block  2s linear   infinite  ;
+}
+#plane{
+    position: absolute;
+    top: 100px;
+    height: 50px;
+    width: 50px;
+}
+#plane img{
+    height: 50px;
+    width: 50px;
+}
+#result{
+    height: 200px;
+    width: 500px;
+    background-color: rgb(186, 22, 31);
+    margin: 5rem auto;
+    border: 2px solid white;
+    border-radius: 20px;
+    display: none; 
+    text-align: center;
+
+}
+#btn{
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 11px;
+    background-color: rgb(28, 89, 120);
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    cursor: pointer;
+
+}
+#text{
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: seashell;
+}
