@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head> <script src="https://cdn.tailwindcss.com"></script>
+        <title>
+            Bank Page
+        </title>
+    </head>
+    <body class="bg-gray-800">
+        <div class="max-w-7xl mx-auto bg-gradient-to-l from-pink-600 to-blue-500 h-screen w-screen">
+        <div class="text-center  justify-center ">
+        <div class="text-7xl text-bold">
+                 WELL COME TO BANKING SECTOR
+        </div>
+        <div  class="space-y-4 mt-48 text-4xl italic">
+                 Credit Amount <input class="rounded-full text-center" type="text" name="amt1" id="cl1" placeholder="Enter Amount"> 
+        <button class="rounded-md px-2 bg-blue-700" id="b1" onclick="CB()">Enter</button> <br>
+                 Debit Amount  <input class="rounded-full text-center" type="text" name="amt2" id="cl2" placeholder="Enter Amount">
+        <button class="rounded-md px-2 bg-blue-700 ml-2" id="b2" onclick="CD()">Enter</button> <br>
+        </div>
+        </div>
+        <div class="text-bold text-4xl mt-64 p-2 bg-gradient-to-r from-pink-500 to-blue-500 italic">
+                      Account Balance <input type="checkBalance" name="amount" id="cl3" class="rounded-full text-center w-36" >
+                      <span>Rs</span>
+      </div>
+        </div>
+        <script>
+       let User = {
+    name : "ARBAZ NANDGAON",
+    age : 22 ,
+    phoneNumber : 82454954165,
+    address : "Karnataka , INDIA",
+    pin : 8789,
+    currBal : 5000,
+    changeName : function (newName){ this.name = newName} ,
+    changeAge : function (newAge){this.age = newAge} ,
+    changePin : function (newPin){ this.pin = newPin} ,
+    printDetails : function () {return { name : this.name , age :this.age ,address : this.address }},
+    creditBalance : function creditBalance(x) { this.currBal = this.currBal +  x ; return this.currBal;},
+    debitBalance : function debitBalance(x) { this.currBal = this.currBal -  x;  return this.currBal;},
+    checkBalance : function () { return this.currBal}
+}
+
+document.getElementById("cl3").value=User.currBal;
+// document.getElementById("cl1").innerHTML=User.currBal
+const CB =()=>{
+    let x=Number(document.getElementById("cl1").value)
+    if(x < 0)return;
+    User.creditBalance(x)
+    // console.log(User)
+    document.getElementById("cl3").value=User.currBal;
+}
+
+// document.getElementById("cl3").value=User.currBal;
+// // document.getElementById("cl2").innerHTML=User.currBal;
+
+const CD =()=>{
+    let x=Number(document.getElementById("cl2").value)
+    if(x < 0 || x > User.currBal)return;
+    User.debitBalance(x)
+    // console.log(User)
+    document.getElementById("cl3").value=User.currBal;
+}
+
+// console.log(User)
+        </script>
+    </body>
+    </html>
