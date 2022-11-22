@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REAL TIME</title>
+    <script>
+      setInterval(() => {
+        a = new Date();
+        time = a.getHours() + ":" + a.getMinutes() + ":" + a.getSeconds();
+        wholeyear = {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        };
+        date = a.toLocaleDateString(undefined, wholeyear);
+        document.getElementById("time").innerHTML = time + " <br>on " + date;
+      }, 1000);
+    </script>
+  </head>
+  <body class="bg-gray-700 decoration-purple-400">
+    <div>
+      <img
+        class="max-w-screen-lg mx-auto rounded-lg"
+        src="https://cdn.pixabay.com/photo/2018/02/24/20/39/clock-3179167__340.jpg"
+      />
+      <div class="text-3xl p-2 text-center font-bold">
+        Indian Standard Time(ISD)
+      </div>
+      <div
+        class="w-1/2 ml-96 mt-0 px-12 py-6 antialiased bg-gradient-to-l from-pink-500 rounded-lg to-red-500 text-4xl font-bold"
+      >
+        Current Time is :<span id="time"></span>
+      </div>
+    </div>
+  </body>
+</html>
