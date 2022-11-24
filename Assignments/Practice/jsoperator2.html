@@ -20,7 +20,7 @@
       //         data.forEach((abc)=>{
 
       //         });
-      //       });
+      //       });if
       //     });
       //     studentsData[0][0].push("Hi");
       //     console.count(studentsData)
@@ -82,7 +82,6 @@
 
       //  let a = 1;
       // a++;
-
       //  a = 1;
       // a++;
 
@@ -323,38 +322,68 @@
       // // console.log(user.a1())
       // console.log(Increment,Decrement,Orbitry)
 
-      let BankAccount = {
-        Name: "Arbaz",
-        age: 22,
-        Phonenumber: 9380610250,
-        Email: "arbaznandgaon@gmail.com",
-        pin: 7412,
-        Balance: 5000,
-        Transaction: [],
-        pin0: function (n) {
-          this.pin = n;
-        },
-        credit: function credit(amt) {
-          this.Balance = this.Balance + amt;
-          if (amt < 0) return;
-          return this.Balance;
-        },
-        debit: function debit(amt) {
-          this.Balance = this.Balance - amt;
-          if (amt < 0 || amt > this.Balance) return;
-          return this.Balance;
-        },
-        checkbalance: function checkBalance() {
-          return this.Balance;
-        },
-        Transactionhistory: function Transactionhistory() {},
-      };
+      // let BankAccount = {
+      //   Name: "Arbaz",
+      //   age: 22,
+      //   Phonenumber: 9380610250,
+      //   Email: "arbaznandgaon@gmail.com",
+      //   pin: 7412,
+      //   Balance: 5000,
+      //   Transaction: [],
+      //   pin0: function (n) {
+      //     this.pin = n;
+      //   },
+      //   credit: function credit(amt) {
+      //     this.Balance = this.Balance + amt;
+      //     if (amt < 0) return;
+      //     return this.Balance;
+      //   },
+      //   debit: function debit(amt) {
+      //     this.Balance = this.Balance - amt;
+      //     if (amt < 0 || amt > this.Balance) return;
+      //     return this.Balance;
+      //   },
+      //   checkbalance: function checkBalance() {
+      //     return this.Balance;
+      //   },
+      //   Transactionhistory: function Transactionhistory() {},
+      // };
 
-      BankAccount.pin0((n = 1234));
-      console.log(BankAccount);
+      // BankAccount.pin0((n = 1234));
+      // console.log(BankAccount);
       // console.log(BankAccount.checkbalance())
       // console.log(BankAccount.credit(1000))
       // console.log(BankAccount.debit(1000))
+
+      let a = [1,2,3];
+      let b = [3,2,1]; 
+      Alice = 0;
+      Bob = 0;
+
+      a.forEach(myfunction);
+      b.forEach(wefunction);
+
+      function myfunction() {
+        for (i = 0; i <= [a,b].length; i++)
+          if (a[i] > b[i] ) {
+            Alice++;
+            return;
+          }
+          else{
+            return
+          }
+      }
+      function wefunction() {
+        for (i = 0; i <= [a,b].length; i++)
+        if (b[i] > a[i] ) {
+          Bob++;
+          return;
+        }
+        else{return}
+      }
+      let arr = [Alice, Bob];
+    
+      console.log(arr);
     </script>
   </body>
 </html>
