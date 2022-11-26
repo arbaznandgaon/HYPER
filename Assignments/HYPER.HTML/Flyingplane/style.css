@@ -30,14 +30,14 @@
     position: relative;
     left: 400px;
     top:-500px;
-    animation: block  2s linear   infinite  ;
+    animation: block  2s linear infinite ;
 }
 #plane{
     position: absolute;
     top: 100px;
     height: 50px;
-    width: 50px;
-}
+    width: 50px; 
+} 
 #plane img{
     height: 50px;
     width: 50px;
