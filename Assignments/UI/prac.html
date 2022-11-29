@@ -1,0 +1,47 @@
+<script>
+    let Me={
+
+Name:" Arbaz Nandgaon",
+Age: "22",
+Contact:9380610250,
+LinkedIn : "arbaznandgaon//linkedIn",
+Education:[{
+   School: "S.G.E.T", PUCollage: "K.L.E", Univercity: "VTU" }],
+TechStack: "HTML_CSS, JS",
+Gender: "Male"
+}
+let BankAccount ={
+
+Name: "Arbaz",
+pin : 7412,
+Balance:500,
+Credit: function(amt){
+   this.Balance = this.Balance + amt;
+},
+Debit:function(amt,pin){
+ if (pin!==this.pin)return;
+ this.Balance = this.Balance - amt;
+},
+checkBalance: function (){
+ return this.Balance ;
+},
+pin0 :  function (n){
+this.pin=n;
+},
+pin1 :  function (m){
+this.pin=m;
+},
+pin2 : function(o){
+   this.pin=o;
+}
+};
+
+BankAccount.pin0(n=9632);
+BankAccount.Debit(200,9632);
+BankAccount.Credit(1700);
+BankAccount.pin1(m=8521);
+BankAccount.Debit(500,8521);
+BankAccount.pin2(o=7854);
+BankAccount.Debit(200,7854);
+console.log(BankAccount.checkBalance());
+</script>

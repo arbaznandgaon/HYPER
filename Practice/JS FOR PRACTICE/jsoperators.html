@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JAVA SCRIPT</title>
+  </head>
+  <body>
+    <script>
+      //       arthematic operators
+      //           var a=100;
+      //           var b=10;
+      //           console.log("the value of a + b is", a+b);
+      //           console.log("the value of a - b is", a-b);
+      //           console.log("the value of a * b is", a*b);
+      //           console.log("the value of a / b is", a/b);
+
+      //           var arr=[1,2,3,4,5,6,7,8,9]
+      //                 console.log(arr[8])
+
+      //          var arr ={
+      //           ravi : 88,
+      //           shubham: 90,
+      //           jvcuksa: 89,
+      //          }
+      //          console.log(arr)
+
+      //       function mul(x){
+      //       return x*5;
+      //       }
+
+      //       const arrr=[];
+      //       const arr1=[1,2,3,4,50,6,7,8,9,10];
+
+      //       for(let i=0;i<arr1.length;i++){
+
+      //           arrr.push(mul(i));
+      //           console.log(arrr);
+      //       }
+      //       console.log(arrr);
+
+      //       function ad(a,b){
+      //           c=a+b;
+      //           return c;
+      //       }
+      //       c1=ad(10,89)
+      //       c2=ad(10,99)
+      //       console.log(c1,c2)
+
+      //       var obtainedmarks=25;
+      //       if (obtainedmarks>35) {
+      //           console.log('you have failed the exam')
+      //       }
+      //       else if (obtainedmarks>21){
+      //           console.log('you have passed the exam')
+      //       }
+      //       var age=8;
+      //       if (age>18){
+      //         console.log('u r not a kid')
+      //       }
+      //       else if (age>16){
+      //           console.log('u r 16')
+      //       }
+      //       else {
+      //           console.log('u r a kid')
+      //       }
+      //       let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      //        console.log(arr);
+      //          for (var i=0;i<arr.length;i++){
+      //             if(i==2){
+      //                 break
+      //                 continue
+      //             }
+      //           console.log(arr[i])}
+      //  var arr1=['a','b','c','d','e','f'];
+      //       console.log(arr1);
+      //       for (var i=0;i<arr1.length;i++){
+      //           console.log(arr1[i])
+      //       }
+      //       arr.forEach(function (element) {
+      //         console.log(element);
+      //       });
+      //    let j=0;
+      //    while (j<arr.length){
+      //     console.log(arr[j])
+      //     j++;
+      //    }
+
+      // let myArr=['arbaz','fan',3,5,null,true];
+      // // console.log(myArr.length);
+      // myArr.pop()
+
+      // myArr.push('newItem');
+      // // myArr.shift();
+      // // myArr.unshift('First');
+      // // myArr.sort();
+      // console.log(myArr);
+
+      //       let myDate=new Date();
+      //       console.log(myDate.getTime());
+      //       console.log(myDate.getDate());
+      //       console.log(myDate.getDay());
+      //       console.log(myDate.getFullYear());
+      //       console.log(myDate.getMinutes());
+      //       console.log(myDate.getHours());
+      //       addEventListener
+
+      // function add(a,b){
+      //   return c=a+b
+      // }
+      // console.log(add(3,5));
+
+      // function write(){
+      //   document.write('Hello World')
+      // }
+      // write();
+
+      // (function (){
+      //   document.write('HI there')
+      // })();
+      // let z='i know';
+
+      // (function (){
+      //   let z='you know'
+      //   // let y='ooops'
+      //   console.log(z)
+      //   // alert(y)
+      // })();
+
+      // closure
+      // function init() {
+      //   var name = 'Arbaz';
+      //   function displayName() {
+
+      //     console.log(name);
+      //   }
+      //   displayName();
+      // }
+      // init();
+
+      // const x = () => {
+      //   let a = 1;
+      //   console.log(a);
+      //   const y = () => {
+      //     let a = 2;
+      //     console.log(a);
+      //     const z = () => {
+      //       let a = 3;
+      //       console.log(a);
+      //     };
+      //     z();
+      //   };
+      //   y();
+      // };
+      // x();
+
+      // function add(a,b) {
+      //   return a + b;
+      // }
+
+      // function hofn(a,b,c) {
+      //   let result=c(a,b);
+      //   console.log(result);
+      // }
+      // hofn(2,5,add);
+
+      //  const div = (a,b) =>{
+      //   var total=a/b
+      // console.log(total)
+
+      // }
+      //  div(4,2);
+      //  div(6,2);
+
+      // (function (){
+      // document.write("Hello world")
+      // })();
+
+      //  myfn = (a,b,c)=>{
+      //   var c=a/b;
+      //  console.log(c)
+      // }
+      // myfn(8,2);
+
+      // const a=(x)=>(y)=>x/y;
+      // console.log(a(8)(2));
+
+      // function count(a) {
+      // console.log(a);
+      // const b = a - 1;
+      // if (b > 0) {
+      //     count(b);
+      // }
+      // }
+      // count(10);
+
+      // forEach
+      // let num=[87,85,96,74,25,36];
+      // num.forEach((num)=>{
+      //   console.log(num*2)result
+      // });
+
+      // let a=["apple","ball","cat","dog"]
+      // a.forEach((string,index)=>{
+      //   document.write(index+":",string+"<br>")
+
+      // })
+
+      // // map()
+      // let n=[7,2,5,8,9,6,3,1];
+      // n.map((x)=>{
+      //   console.log(x*10)
+      // });
+      // console.log(n);
+
+      // let ary=[1,2,3,4,5,6,7,8,9];
+      // let ary1=ary.map(num);
+      // console.log(ary1);
+      // function num(x){
+      //   return x
+      // };
+
+      // var x=[
+      // {name:"arbaz" , city:"bijapur"},
+      // {name:"sumera" , city:"tikkondi"},
+      // {name:"anmol" , city:"hyd"}]
+
+      // var y=x.map(run);
+      // console.log(y);
+
+      // function run(a){
+      //   return a.name+":"+a.city
+      // }
+
+      // filter()
+      // let arr=[56,12,48,32,8,15,10]
+      // console.log(arr);
+
+      // let arr1=arr.filter(checknum)
+      // console.log(arr1);
+
+      // function checknum(x){
+      //   return x>=18
+      // }
+
+      // var x=[23,18,45,7,13,60]
+
+      // var y=x.filter(checknum)
+      // console.log(y);
+
+      // function checknum(a){
+      //   return a>=18
+      // }
+
+      // let a=[6,8,7,4,2,1,9];
+
+      // b=a.map(task);
+      // console.log(b);
+
+      // function task(x){
+      //   return x*10
+      // }
+
+      // function temp(a,b,fn) {
+      //   return fn;
+      // }
+
+      // function add(){
+
+      // }
+
+      //  add =(a,b)=>{
+      //   return c=a+b;
+      // }
+      // console.log(add(2,4));
+
+      // const x="BLDE";
+      // const x1=0;
+      // console.log(x)
+
+      // var arr=["Arbaz",,,0,9,8,7,8]
+
+      // console.log(arr)
+      // ;
+
+      // let arr=[5,1,2,3,4,5,6,7,8,9,5,10];
+
+      // let arr1=arr.filter(num)
+      //   console.log(arr1);
+
+      //   function num(a){
+      //     return a!=5&&a!=10
+      //   }
+
+      // const arr = [0, 1, 2];
+
+      // function myfn() {
+      //   for (let i = 0; i < arr.length; i++) {
+      //     console.log("hello");
+      //   }
+      // }
+
+      // console.log(arr.filter(myfn));
+
+      // const x="hi";
+      // var y="hello";
+      // let z="hey";
+
+      // var y="new";
+      // console.log(y)
+
+      // let arr = [5, 1, 2, 4, 2, 2, 5, 55, 6, 2, 3, 6, 1, 5, 0, 6, 9, 10];
+
+      // let arr1 = arr
+      //   .filter((x, y) => y % 5 != 0 && x % 5 != 0).map((x) => x + "");
+
+      // console.log(arr1);
+
+      //       const newData = [
+      //     {'task1': 'exercise'},
+      //     [1, 2 ,3],
+      //     function hello() { console.log('hello')}
+      // ];
+      // console.log(newData)
+
+      // let arr = ['h', 'e'];
+      // let arr1 = arr.push('l');
+      // // arr1);
+      // console.log(arr);apple
+      // console.log(arr1);
+
+      // let arr = 49;
+      // let arr11 = arr;
+      // arr11 = 60;
+      // console.log(arr11+arr);
+
+      // let studentsData = [[["Jack"], [24]],[["Sara"], [23]]];
+        
+      // // iterating over the studentsData
+      // studentsData.forEach((student) => {
+      //   student.forEach((data) => {
+      //     data.forEach((abc)=>{
+           
+             
+      //     });
+      //   });
+      // });
+      // studentsData[0][0].push("Hi");
+      // console.count(studentsData())
+      
+//       var data = 0;
+
+//   inc=()=> {
+//       return data++;    
+//   }
+//   dec=()=> {
+//       return data = data--;  
+//   }
+// console.log(inc())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+// var a={
+//   name:"arbaz",
+//   city:"athani",
+//   mob:12223456789,
+// }
+//   console.log(a.mob)
+
+
+//        let arr=[0,9,8,7,6,5,4,3,2,1];
+// console.log(arr)
+//      let arr1=[5,0,0,0,0,0,0,0,0]
+    //   //  arr.pop();
+    //   // arr.push("hi")
+    //   // arr.shift()
+    //   // arr.unshift();
+      //  console.log(arr);
+      //  arr[1]="Arbaz"
+      // let xyz=arr[1];
+      // console.log(xyz+5);
+      // value=arr.indexOf(4)
+// console.log(value)/
+// arr.splice(1,2)
+// arr=arr.concat(arr1)
+// console.log(arr)
+
+// let arr=new Array(10);
+// console.log(arr.length);
+// console.log(arr)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>

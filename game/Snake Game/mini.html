@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head class="">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="mini.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="overflow-y-hidden bg-[url('https://static.vecteezy.com/system/resources/previews/001/849/553/original/modern-gold-background-free-vector.jpg')]">
+    <div class="max-w-3xl flex mx-auto my-10 justify-center items-center rounded-md h-[600px]">
+        <div class="absolute text-white top-10 right-40 font-bold text-2xl" id="scoreBox">Score: 0</div>
+       
+        <div id="board" class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+    </div>
+    
+
+
+<script>
+let inputDir = {x: 0, y: 0}; //defines snakes initial direction, snake is not moving 
+const foodSound = new Audio('music/food.mp3');
+const gameOverSound = new Audio('music/gameover.mp3');
+const moveSound = new Audio('music/move.mp3');
+const musicSound = new Audio('music/music.mp3');
+let speed = 10;
+let score = 0;
+let lastPaintTime = 0;
+let snakeArr = [    {x: 13, y: 15} ];  //Initial position of snake head, x-col and y-row
+
+ food = {x: 6, y: 7};  //food initial position HiScore
+
+// Game Functions
+function main(ctime) {
+    window.requestAnimationFrame(main); //high quality animation method which loops the function
+    // console.log(ctime);
+    if((ctime - lastPaintTime)/1000 < 1/speed){
+        return;
+    }
+    lastPaintTime = ctime;
+    gameEngine();
+}
+
+function isCollide(snake) {
+    // If you bump into yourself 
+    for (let i = 1; i < snakeArr.length; i++) {
+        if(snake[i].x === snake[0].x && snake[i].y === snake[0].y){
+            return true;
+        }
+    }
+    // If you bump into the wall
+    if(snake[0].x >= 18 || snake[0].x <=0 || snake[0].y >= 18 || snake[0].y <=0){
+        return true;
+    }
+        
+    return false;
+}
+
+function gameEngine(){
+    
+ // Part 1: Updating the snake array & Food
+ if(isCollide(snakeArr)){
+     gameOverSound.play();
+     musicSound.pause();
+     inputDir =  {x: 0, y: 0}; 
+     alert("Game Over. Press any key to play again!");
+     snakeArr = [{x: 13, y: 15}];
+     musicSound.play();
+     score = 0; 
+ }
+
+
+ // If you have eaten the food, increment the score and regenerate the food
+ if(snakeArr[0].y === food.y && snakeArr[0].x ===food.x){
+        foodSound.play();
+        score += 1;
+        
+        scoreBox.innerHTML = "Score: " + score;
+        snakeArr.unshift({x: snakeArr[0].x + inputDir.x, y: snakeArr[0].y + inputDir.y});
+        let a = 2;
+        let b = 16;
+        food = {x: Math.round(a + (b-a)* Math.random()), y: Math.round(a + (b-a)* Math.random())}
+    }
+
+// Moving the snake
+for (let i = snakeArr.length - 2; i>=0; i--) { 
+snakeArr[i+1] = {...snakeArr[i]};
+    }
+
+    snakeArr[0].x += inputDir.x;
+    snakeArr[0].y += inputDir.y;
+
+
+
+    // Part 2: Display the snake and Food
+    // Display the snake
+    board.innerHTML = "";
+    snakeArr.forEach((e, index)=>{                    //
+        snakeElement = document.createElement('div');
+        snakeElement.style.gridRowStart = e.y;    //displaying the initial head of snake at 15 row
+        snakeElement.style.gridColumnStart = e.x;  //displaying the initial head of snake at 13 col
+
+        if(index === 0){   //if the index value is 0, it will add as head, 
+            snakeElement.classList.add('head');
+        }
+        else{               //else it will add purple block as snake array
+            snakeElement.classList.add('snake');
+        }
+        board.appendChild(snakeElement);
+    });
+
+
+     // Display the food
+     foodElement = document.createElement('div');
+    foodElement.style.gridRowStart = food.y;  //displaying the initial food of snake at 7 row
+    foodElement.style.gridColumnStart = food.x; //displaying the initial food of snake at 6 col
+    foodElement.classList.add('food')
+    board.appendChild(foodElement);
+
+}
+
+// Main logic starts here
+window.requestAnimationFrame(main);
+window.addEventListener('keydown', e =>{
+    inputDir = {x: 0, y: 1} // Start the game
+    moveSound.play();
+    switch (e.key) {  //keyboard clicks for moving the snake 
+        case "ArrowUp":
+            console.log("ArrowUp");
+            inputDir.x = 0;  //x remains constant in upward and downward directions
+            inputDir.y = -1;  //y values decreases[ is negative] when snakes move towards upwards
+            break;
+
+        case "ArrowDown":
+            console.log("ArrowDown");
+            inputDir.x = 0;
+            inputDir.y = 1; //y values increases[ is positive] when snakes move towards downwards
+            break;
+
+        case "ArrowLeft":
+            console.log("ArrowLeft");
+            inputDir.x = -1;  //x values decreases[ is negative] when snakes move towards left
+            inputDir.y = 0;  //y remains constant in left and right directions
+            break;
+
+        case "ArrowRight":
+            console.log("ArrowRight");
+            inputDir.x = 1;  //x values increases[ is positive] when snakes move towards right
+            inputDir.y = 0; //y remains constant in left and right directions
+            break;
+        default:
+            break;
+    }
+});
+    </script>
+</body>
+</html>
