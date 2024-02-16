@@ -7,3 +7,4 @@ ar=[12,3,2,1]
 ar.pop()
 
 console.log(ar)
+console.log("hi")
